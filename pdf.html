@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Covid19</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/icon" href="images/titlebar.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/geodata/data/countries2.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/geodata/india2019Low.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <link rel="stylesheet" href="styproject.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Texturina:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css" integrity="sha512-kJ30H6g4NGhWopgdseRb8wTsyllFUYIx3hiUwmGAkgA9B/JbzUBDQVr2VVlWGde6sdBVOG7oU8AL35ORDuMm8g==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <link rel="stylesheet" href= 
+"https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> 
+      
+    <link rel='stylesheet' href= 
+'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'> 
+      
+    <script src= 
+'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'> 
+    </script> 
+      
+    <script src= 
+'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'> 
+    </script> 
+<style>
+
+    body
+{
+font-family: Franklin Gothic Condensed;
+}
+
+
+.container{
+position: relative;
+	width: 80%;
+	
+	background:#f2f2f2;
+	overflow: hidden;
+	transition: all 0.5s ease-in;
+	z-index: 2;
+	box-sizing: border-box;
+	padding:30px;
+	box-shadow: -10px 25px 50px rgba(0,0,0,0.3);  
+	border-radius: 15px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  width: 100%;
+}
+
+p
+{
+    color: #70757a;
+}
+
+.centerdivi{
+  		height: 100px;
+  		display: flex;
+  		justify-content: center;
+  		align-items: center;
+
+  	}
+  	.footer_class{
+  		height: 50px;
+  		width: 50px;
+  		background-color: #f5f6fa;
+  		border-radius: 25px;
+  		text-align: center;
+  		margin: 10px;
+  		box-shadow: 1px 4px 2px 2px #dcdde1;
+  		line-height: 60px;
+  	}
+  	.footer_class i{
+  		font-size: 20px;
+  		transition: all 0.3s linear;
+
+  	}
+  	.footer_class:hover i{
+  		transform: scale(1.4);
+  	}
+
+
+.navbar-nav{
+	display:table;
+	float:none;
+	margin: 0 auto;
+	table-layout: fixed;
+	font-size:18px;
+	padding-top: 10px;
+	padding-bottom: 6px;
+}
+
+li a:hover {
+  background-color: #006699;
+border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px){
+	
+	navbar-nav{
+		float: left;
+		font-size: 10px;
+	}
+	.nav>li>a {padding: 10px;}
+}
+
+.navbar-brand{
+	font-size:24px;
+	padding-top: 28px;
+	padding-bottom: 38px;	
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  
+}
+.my_active{
+  background-color: white;
+  border-radius: 5px;
+}
+.icon_bar{ 
+	background-color: white;
+ }
+span{
+background-color:#337ab7;
+}
+
+</style>
+</head>
+<body>
+<div class="bg_n"><div class="centered"><h1>Novel Coronavirus<br>(covid-19)<br>Resources</h1></div></div>	
+<table class="table">
+<nav class="navbar navbar-fixed-top navbar_class">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button id="button_color" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Covid Tracker</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav ">
+        <li class="active"><a href="project.html">Home</a></li>
+    <li class="nav-item">
+      <a class="nav-link" href="pre.html">Awareness</a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link my_active" href="pdf.html">News</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="container.html">Percaution</a>
+    </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+</table>
+
+<br><center><h1 style="font-family: 'Texturina', serif;color: #6c757d;"><b>Top News</b></h1></center>
+<br>
+<div id="demo"></div>
+
+<script>
+
+$(document).ready(function(){
+  $(window).scroll(function(){
+  	var scroll = $(window).scrollTop();
+	  if (scroll > 650) {
+	    $(".navbar_class").css("background" , "#000000");
+	  }
+
+	  else{
+		  $(".navbar_class").css("background" , "transparent");  	
+	  }
+  })
+})
+
+const data = null;
+
+const xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+
+
+xhr.onload = function () {
+var obj = JSON.parse(this.response)
+	if (this.readyState === this.DONE) {
+		console.log(obj);
+	}
+
+for(x in obj["articles"]){
+	var img_str='images/newssam.jpg';
+	if(obj["articles"][x]["media"]!=null)
+	img_str=obj["articles"][x]["media"];	
+document.getElementById("demo").innerHTML+="<div class='container'><div class='row'><div class='col-lg-8'><a href='"+obj["articles"][x]["link"]+"' target='_blank'><h3><b>"+obj["articles"][x]["title"]+"</b></h3></a><p>"+obj["articles"][x]["summary"]+"</p></div><div class='col-lg-4 '><img class='center' src='"+img_str+"' ></div></div></div><br>";}
+};
+
+xhr.open("GET", "https://covid-19-news.p.rapidapi.com/v1/covid?q=covid&lang=en&media=True");
+xhr.setRequestHeader("x-rapidapi-key", "29b37a29f2mshd1b91e8222e4414p1b4563jsndd6fb4472944");
+xhr.setRequestHeader("x-rapidapi-host", "covid-19-news.p.rapidapi.com");
+
+xhr.send(data);
+
+</script>
+<br><br>
+<center style='color:#007bff;font-weight: 900;font-size:18px'>Covid19India</center>
+<center>We stand with everyone fighting on the frontlines</center>
+<center><b>Contributed by:<a href="https://github.com/YashikGarg">Yashik Garg</a></b></center>
+<footer>
+<div class="centerdivi">
+<a href="#" class="footer_class"><i class="fa fa-2x fa-facebook"></i></a>
+<a href="#" class="footer_class"><i class="fa fa-2x fa-instagram"></i></a>
+<a href="#" class="footer_class"><i class="fa fa-2x fa-linkedin-in"></i></a>
+<a href="#" class="footer_class"><i class="fa fa-2x fa-github"></i></a>
+	
+</div>
+</footer>
+</body>
+</html>

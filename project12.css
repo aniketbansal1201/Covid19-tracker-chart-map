@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Covid19</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/icon" href="titlebar.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/geodata/data/countries2.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/geodata/india2019Low.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <link rel="stylesheet" href="styproject.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style >
+  .icon-success {
+    color: #5CB85C;
+}
+  
+    .glyphicon-remove{
+      color: #FF2D00;
+    }
+
+
+
+  
+</style>
+
+
+</head>
+<body>
+<center><h2>Percaution</h2></center>
+<div class="container-fluid">
+  <table class="table table-striped table-dark">
+
+  <tbody>
+    <tr>
+      
+      <td>  <span class="glyphicon glyphicon-ok icon-success"></span>  If you have symptoms and suspect you have coronavirus - reach out to your doctor or call state helplines.</td>
+    </tr>
+    
+    <tr>
+      
+      <td><span class="glyphicon glyphicon-ok icon-success"></span>  The hot weather will not stop the virus! You can! Stay home, stay safe.</td>
+    </tr>
+
+    <tr>   
+      
+      <td><span class="glyphicon glyphicon-ok icon-success"></span> Wash your hands with soap and water often. Keep the virus at bay.</td>
+    </tr>
+        <tr>   
+      
+      <td><span class="glyphicon glyphicon-ok icon-success"></span>  Cover your nose and mouth with a disposable tissue or flexed elbow when you cough or sneeze</td>
+    </tr>
+    
+        <tr>   
+      
+      <td><span class="glyphicon glyphicon-ok icon-success"></span>  Going out to buy essentials? Social Distancing is KEY! Maintain 2 metres distance between each other in the line.</td>
+    </tr>
+    
+        <tr>   
+      
+      <td><span class="glyphicon glyphicon-ok icon-success"></span>  Be compassionate! Help those in need like the elderly and poor. They are facing a crisis you cannot even imagine!</td>
+    </tr>
+    <tr>   
+      
+      <td><span class="glyphicon glyphicon-ok icon-success"></span>   This will pass too. Enjoy your time at home and spend quality time with your family! Things will be normal soon.</td>
+    </tr>
+<tr>
+  <td><span class="glyphicon glyphicon-remove"></span>Stand Against FAKE News and WhatsApp Forwards! Do NOT forward a message until you verify the content it contains.</td>
+</tr>
+    <tr>
+  <td><span class="glyphicon glyphicon-remove"></span>Do not panic! Your essential needs will be taken care of. DO NOT HOARD.</td>
+</tr>
+<tr>
+  <td><span class="glyphicon glyphicon-remove"></span>Do not Touch your eyes, nose, or mouth if your hands are not clean</td>
+</tr>
+  </tbody>
+</table>
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

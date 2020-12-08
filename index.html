@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Covid19</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/icon" href="images/titlebar.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/geodata/data/countries2.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/geodata/india2019Low.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <link rel="stylesheet" href="styproject.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Texturina:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css" integrity="sha512-kJ30H6g4NGhWopgdseRb8wTsyllFUYIx3hiUwmGAkgA9B/JbzUBDQVr2VVlWGde6sdBVOG7oU8AL35ORDuMm8g==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
+
+
+
+  <style>
+      body
+{
+font-family: 'Texturina', serif;
+}
+
+.centerdivi{
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+    .footer_class{
+      height: 50px;
+      width: 50px;
+      background-color: #f5f6fa;
+      border-radius: 25px;
+      text-align: center;
+      margin: 10px;
+      box-shadow: 1px 4px 2px 2px #dcdde1;
+      line-height: 60px;
+    }
+    .footer_class i{
+      font-size: 20px;
+      transition: all 0.3s linear;
+
+    }
+    .footer_class:hover i{
+      transform: scale(1.4);
+    }
+
+    .Table
+    {
+        display: table;
+         border-spacing: 5px;
+         
+    }
+    .Title
+    {
+        display: table-caption;
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+    }
+    .Heading
+    {
+        display: table-row;
+        font-weight: bold;
+        text-align: center;
+        background: #edeeef;
+    }
+    .Row
+    {
+        display: table-row;
+    }
+    .Cell
+    {
+        display: table-cell;
+        border: solid;
+        border-width: 0px;
+       
+        border-radius: 5px;
+            padding: 1.25rem .5rem .75rem;
+        
+    }
+    .hide_border{
+    border-width:0px;
+    padding:1px;
+   
+    }
+    .Top_Table
+    {
+        display: table;
+         border-spacing: 10px;
+         
+    }
+    .Top_Row
+    {
+        display: table-row;
+    }
+    .Top_Cell
+    {
+        display: table-cell;
+        border: solid;
+        border-width: 0px;
+       
+        border-radius: 5px;
+            padding: 1.25rem .5rem .75rem;
+        
+        cursor:pointer;
+        width:162px;
+        text-align: center;
+    }
+    .my_container
+   {
+       display:block;
+       padding-left:10px;
+       padding-right:10px;
+   }
+    
+#chartdiv {
+  width: 100%;
+  height: 500px
+}
+
+
+#chart0,#chart1,#chart2,#chart3 {
+  max-width: 100%;
+ 
+  height:100px;
+}
+#all.active,#one_month.active,#three_month.active {
+    color: #fff;
+    background: #008FFB;
+    border: 1px solid blue;
+    border-bottom: 2px solid blue;
+}
+
+#all,#one_month,#three_month {
+    background: #fff;
+    color: #222;
+    border: 1px solid #e7e7e7;
+    border-bottom: 2px solid #ddd;
+    border-radius: 2px;
+    padding: 4px 17px;
+}
+
+.counter_odd{
+ background: #f6f6f7;
+}
+.counter_even{
+ background: #edeeef;
+}
+
+.district_css:nth-child(odd) {
+  background: #edeeef;
+}
+
+.district_css:nth-child(even) {
+  background: #f6f6f7;
+}
+
+[id$="meta_data"]{
+font-size: 25px;
+padding-top:5px;
+padding-bottom:10px;
+font-weight: bold;
+}
+
+#map_conf_india.active{
+background-color: #ffe6eb;
+}
+
+#map_conf_india:hover{
+background-color: #ffccd6;
+}
+
+#map_active_india.active{
+background-color: #e6f2ff;
+}
+
+#map_active_india:hover{
+background-color: #cce5ff;
+}
+
+#map_recv_india.active{
+background-color: #eafaee;
+}
+
+#map_recv_india:hover{
+background-color: #d6f5dd;
+}
+
+#map_dec_india.active{
+background-color: #f1f2f3;
+}
+
+#map_dec_india:hover{
+background-color: #e4e6e7;
+}
+
+
+.my_active{
+  background-color: white;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+</style>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<body >
+
+<div id="load"></div>
+
+
+
+
+
+
+
+
+
+  
+<div class="bg_im">
+  <div class="container">
+    <p class="typewrite centered" style="font-family: 'Slabo 27px', serif; font-weight: 450;font-size: 50px;" data-period="2000" data-type='[ "Covid-19 India", "Covid-19 tracker", "Updated everyday"]'>
+    <span class="wrap"></span></p>
+    
+  </div>
+  
+</div>
+<table class="table">
+  <div class="topheader">
+<nav class="navbar navbar-fixed-top navbar_class">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Covid Tracker</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav " style="font-family: Franklin Gothic Condensed;">
+        <li class="my_active"><a href="#">Home</a></li>
+    <li class="nav-item">
+      <a class="nav-link" href="pre.html">Awareness</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pdf.html">News</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="container.html">Percaution</a>
+    </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+</div>
+</table>
+
+
+<br><br>
+<center style="color: #6c757d;"><h1><strong>Crona Virus !!! Live Data !!! 😷</strong></h1>
+<h3><strong>Stay home, stay safe – the only medicine found till now for coronavirus.</strong></h3>
+</center>
+
+<br><br><br>
+<div class="my_container">
+<div class="row">
+<div class="col-lg-6 col-md-6">
+
+<div class='Top_Table'>
+<div class='Top_Row'>
+<div class='Top_Cell ' id="map_conf_india" style="color:#ff073a;">Confirmed
+<br><br>
+<div id="conf_delta">&nbsp</div>
+<div id="conf_meta_data">Loading......</div>
+<div class="svg-parent"><svg width="100" height="75" viewBox="0 0 100 45" preserveAspectRatio="xMidYMid meet"><path fill="none" stroke="#ff073a99" stroke-width="2.5" d="M5,10C6.416666666666667,10.218222442899703,7.833333333333333,10.436444885799405,9.25,10.564548162859982C10.666666666666666,10.692651439920558,12.083333333333334,10.632571996027806,13.5,10.768619662363456C14.916666666666666,10.904667328699105,16.333333333333332,12.080850711684873,17.75,13.436941410129096C19.166666666666668,14.79303210857332,20.583333333333332,18.9051638530288,22,18.9051638530288C23.416666666666668,18.9051638530288,24.833333333333332,15.149122807017543,26.25,14.514895729890766C27.666666666666668,13.880668652763989,29.083333333333332,13.5635551142006,30.5,13.5635551142006C31.916666666666668,13.5635551142006,33.333333333333336,14.35782853359815,34.75,14.503475670307846C36.166666666666664,14.649122807017543,37.583333333333336,14.576299238662694,39,14.72194637537239C40.416666666666664,14.867593512082086,41.833333333333336,15.829278384640851,43.25,16.49205561072493C44.666666666666664,17.154832836809007,46.083333333333336,17.51837140019861,47.5,18.69860973187686C48.91666666666667,19.87884806355511,50.333333333333336,23.573485600794438,51.75000000000001,23.573485600794438C53.16666666666667,23.573485600794438,54.583333333333336,21.29708705726581,56,20.131578947368425C57.416666666666664,18.96607083747104,58.833333333333336,16.580436941410127,60.25,16.580436941410127C61.666666666666664,16.580436941410127,63.083333333333336,17.115607414763325,64.5,17.286991062562066C65.91666666666667,17.458374710360808,67.33333333333333,17.481545845746442,68.75,17.608738828202583C70.16666666666667,17.735931810658723,71.58333333333333,17.86900033101622,73,18.05014895729891C74.41666666666667,18.231297583581597,75.83333333333333,18.26530950016551,77.25,18.695630585898712C78.66666666666667,19.125951671631913,80.08333333333333,22.83465739821251,81.5,22.83465739821251C82.91666666666667,22.83465739821251,84.33333333333333,19.70878848063555,85.75,18.643495531281033C87.16666666666667,17.578202581926515,88.58333333333333,17.010551142005962,90,16.442899702085406" stroke-dasharray="101.33840942382812" stroke-dashoffset="0"></path><circle fill="#ff073a" r="2.5" cx="90" cy="16.442899702085406" style="opacity: 1;"></circle></svg></div>
+</div>
+<div class='Top_Cell active' id="map_active_india" style="color:#007bff">Active
+<br><br>
+<div id="active_delta">&nbsp</div>
+<div id="active_meta_data" >Loading......</div>
+<div class="svg-parent"><svg width="100" height="75" viewBox="0 40 100 45" preserveAspectRatio="xMidYMid meet"><path fill="none" stroke="#007bff99" stroke-width="2.5" d="M5,50.72570832301652C6.416666666666667,50.881327155035194,7.833333333333333,51.03694598705387,9.25,51.659421315128576C10.666666666666666,52.28189664320328,12.083333333333334,54.5686392416257,13.5,54.5686392416257C14.916666666666666,54.5686392416257,16.333333333333332,53.208181528775064,17.75,53.208181528775064C19.166666666666668,53.208181528775064,20.583333333333332,69.26180538360865,22,69.26180538360865C23.416666666666668,69.26180538360865,24.833333333333332,50.652170068267836,26.25,50.652170068267836C27.666666666666668,50.652170068267836,29.083333333333332,68.24452619291854,30.5,68.24452619291854C31.916666666666668,68.24452619291854,33.333333333333336,66.69390895263697,34.75,64.78488557178734C36.166666666666664,62.87586219093771,37.583333333333336,57.69067242050157,39,56.790385907820735C40.416666666666664,55.8900993951399,41.833333333333336,55.43995613879948,43.25,55.43995613879948C44.666666666666664,55.43995613879948,46.083333333333336,55.95138127409714,47.5,56.974231544692444C48.91666666666667,57.99708181528776,50.333333333333336,73,51.75000000000001,73C53.16666666666667,73,54.583333333333336,63.17502918184712,56,59.21603409854622C57.416666666666664,55.257039015245304,58.833333333333336,49.24602950019454,60.25,49.24602950019454C61.666666666666664,49.24602950019454,63.083333333333336,51.43824944289201,64.5,52.275582752644056C65.91666666666667,53.1129160623961,67.33333333333333,53.923136783276156,68.75,54.27002935870681C70.16666666666667,54.61692193413746,71.58333333333333,54.79036822185278,73,54.79036822185278C74.41666666666667,54.79036822185278,75.83333333333333,50.294506738353796,77.25,50.294506738353796C78.66666666666667,50.294506738353796,80.08333333333333,65.39324749743554,81.5,65.39324749743554C82.91666666666667,65.39324749743554,84.33333333333333,51.46666195040854,85.75,50.252166531074245C87.16666666666667,49.03767111173995,88.58333333333333,48.73404725690637,90,48.4304234020728" stroke-dasharray="192.10397338867188" stroke-dashoffset="0"></path><circle fill="#007bff" r="2.5" cx="90" cy="48.4304234020728" style="opacity: 1;"></circle></svg></div>
+</div>
+<div class='Top_Cell' id="map_recv_india" style="color:#28a745">Recover
+<br><br>
+<div id="recv_delta">&nbsp</div>
+<div id="recv_meta_data">Loading......</div>
+<div class="svg-parent"><svg width="100" height="75" viewBox="0 -3 100 45" preserveAspectRatio="xMidYMid meet"><path fill="none" stroke="#28a74599" stroke-width="2.5" d="M5,13.47184550219329C6.416666666666667,13.516188836238864,7.833333333333333,13.56053217028444,9.25,13.56053217028444C10.666666666666666,13.56053217028444,12.083333333333334,12.762748080089489,13.5,12.762748080089489C14.916666666666666,12.762748080089489,16.333333333333332,15.203611065723152,17.75,15.203611065723152C19.166666666666668,15.203611065723152,20.583333333333332,13.864600746596953,22,13.864600746596953C23.416666666666668,13.864600746596953,24.833333333333332,17.020895916340926,26.25,17.020895916340926C27.666666666666668,17.020895916340926,29.083333333333332,10,30.5,10C31.916666666666668,10,33.333333333333336,11.147185807116553,34.75,11.976445746031349C36.166666666666664,12.805705684946144,37.583333333333336,14.163984238508815,39,14.975559633488768C40.416666666666664,15.78713502846872,41.833333333333336,16.338457284347857,43.25,16.845898115911062C44.666666666666664,17.353338947474267,46.083333333333336,18.020204622867993,47.5,18.020204622867993C48.91666666666667,18.020204622867993,50.333333333333336,16.21123414738377,51.75000000000001,16.21123414738377C53.16666666666667,16.21123414738377,54.583333333333336,17.886316788376217,56,18.366636920099047C57.416666666666664,18.846957051821878,58.833333333333336,19.093154937720747,60.25,19.093154937720747C61.666666666666664,19.093154937720747,63.083333333333336,18.74824034388708,64.5,18.58914543557773C65.91666666666667,18.43005052726838,67.33333333333333,18.138585487864653,68.75,18.138585487864653C70.16666666666667,18.138585487864653,71.58333333333333,18.181213157200133,73,18.266468495871095C74.41666666666667,18.351723834542057,75.83333333333333,20.392572994306253,77.25,20.392572994306253C78.66666666666667,20.392572994306253,80.08333333333333,18.329024270685387,81.5,18.329024270685387C82.91666666666667,18.329024270685387,84.33333333333333,20.386238232299746,85.75,20.386238232299746C87.16666666666667,20.386238232299746,88.58333333333333,19.88242669146944,90,19.378615150639135" stroke-dasharray="96.45137023925781" stroke-dashoffset="0"></path><circle fill="#28a745" r="2.5" cx="90" cy="19.378615150639135" style="opacity: 1;"></circle></svg></div>
+</div>
+<div class='Top_Cell' id="map_dec_india" style="color:#6c757d">Deceased
+<br><br>
+<div id="dec_delta">&nbsp</div>
+<div id="dec_meta_data">Loading......</div>
+<div class="svg-parent"><svg width="100" height="75" viewBox="0 -3 100 45" preserveAspectRatio="xMidYMid meet"><path fill="none" stroke="#6c757d99" stroke-width="2.5" d="M5,14.578488372093025C6.416666666666667,15.21947674418605,7.833333333333333,15.860465116279073,9.25,15.860465116279073C10.666666666666666,15.860465116279073,12.083333333333334,10,13.5,10C14.916666666666666,10,16.333333333333332,23.735465116279073,17.75,23.735465116279073C19.166666666666668,23.735465116279073,20.583333333333332,23.664244186046513,22,23.521802325581397C23.416666666666668,23.37936046511628,24.833333333333332,19.706395348837212,26.25,19.706395348837212C27.666666666666668,19.706395348837212,29.083333333333332,19.960755813953487,30.5,20.103197674418603C31.916666666666668,20.24563953488372,33.333333333333336,20.32703488372093,34.75,20.561046511627907C36.166666666666664,20.795058139534884,37.583333333333336,20.9578488372093,39,21.507267441860463C40.416666666666664,22.056686046511626,41.833333333333336,22.98255813953488,43.25,23.85755813953488C44.666666666666664,24.73255813953488,46.083333333333336,26.757267441860467,47.5,26.757267441860467C48.91666666666667,26.757267441860467,50.333333333333336,26.655523255813954,51.75000000000001,26.513081395348838C53.16666666666667,26.370639534883722,54.583333333333336,25.984011627906977,56,25.90261627906977C57.416666666666664,25.82122093023256,58.833333333333336,25.861918604651162,60.25,25.780523255813954C61.666666666666664,25.699127906976745,63.083333333333336,24.34593023255814,64.5,24.34593023255814C65.91666666666667,24.34593023255814,67.33333333333333,24.46802325581395,68.75,24.712209302325576C70.16666666666667,24.9563953488372,71.58333333333333,27.184593023255815,73,27.184593023255815C74.41666666666667,27.184593023255815,75.83333333333333,26.655523255813954,77.25,26.513081395348838C78.66666666666667,26.370639534883722,80.08333333333333,26.39607558139535,81.5,26.299418604651166C82.91666666666667,26.20276162790698,84.33333333333333,26.17732558139535,85.75,25.933139534883722C87.16666666666667,25.688953488372093,88.58333333333333,22.850290697674417,90,20.01162790697674" stroke-dasharray="106.56552124023438" stroke-dashoffset="0"></path><circle fill="#6c757d" r="2.5" cx="90" cy="20.01162790697674" style="opacity: 1;"></circle></svg></div>
+</div>
+</div>
+</div>
+
+<br> 
+<div class='Table' id="demo">
+
+<div class='Heading'>
+<div class='Cell'>State</div>
+<div class='Cell'>Confirmed</div>
+<div class='Cell'>Active</div>
+<div class='Cell'>Recovered</div>
+<div class='Cell'>Deceased</div>
+<div class='Cell'>Tested</div>
+
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<br class='visible-xs'>
+<div class="row">
+<div class="col-xs-6">
+<p style="font-size:26px;color:#e23028;margin:0px"><b><span style="background-color:#ffe6e6">&nbsp;India&nbsp;&nbsp;</span></b></p>
+<h5 id="map_text_left" style="margin:5px;">Last Updated on </h5>
+</div>
+<div class="col-xs-6" style="text-align: right;color:#201aa2">
+<h5 style="margin:5px;">Tested</h5>
+<h3 style="margin:5px;"><strong id="map_case_right">134567454</strong></h3>
+<h5 style="margin:5px;" id="map_date_right">As of </h5>
+<h5 style="margin:5px">per <span style="background-color:#d5d3f8">source</span></h5>
+
+</div>
+</div>
+<br><br>
+<div id="chartdiv"></div>
+
+<br>
+<center><b><h1 style="color: #6c757d;">Spread Trends</h1></b></center>
+<br><br>
+
+<div class="toolbar">
+<select id="new_data" class="form-control" >
+           <option value = "India"> India </option>
+          <option value = "Andaman_and_Nicobar_Islands">  Andaman   and   Nicobar   Islands </option>
+<option value = "Andhra_Pradesh"> Andhra   Pradesh  </option>
+<option value = "Arunachal_Pradesh">  Arunachal   Pradesh </option>
+<option value = "Assam">  Assam </option>
+<option value = "Bihar">  Bihar </option>
+<option value = "Chandigarh"> Chandigarh  </option>
+<option value = "Chhattisgarh"> Chhattisgarh  </option>
+<option value = "Dadra_and_Nagar_Haveli_and_Daman_and_Diu"> Dadra   and   Nagar   Haveli   and   Daman   and   Diu  </option>
+<option value = "Delhi">  Delhi </option>
+<option value = "Goa">  Goa </option>
+<option value = "Gujarat">  Gujarat </option>
+<option value = "Haryana">  Haryana </option>
+<option value = "Himachal_Pradesh"> Himachal   Pradesh  </option>
+<option value = "Jammu_and_Kashmir">  Jammu   and   Kashmir </option>
+<option value = "Jharkhand">  Jharkhand </option>
+<option value = "Karnataka">  Karnataka </option>
+<option value = "Kerala"> Kerala  </option>
+<option value = "Ladakh"> Ladakh  </option>
+<option value = "Madhya_Pradesh"> Madhya   Pradesh  </option>
+<option value = "Maharashtra">  Maharashtra </option>
+<option value = "Manipur">  Manipur </option>
+<option value = "Meghalaya">  Meghalaya </option>
+<option value = "Mizoram">  Mizoram </option>
+<option value = "Nagaland"> Nagaland  </option>
+<option value = "Odisha"> Odisha  </option>
+<option value = "Puducherry"> Puducherry  </option>
+<option value = "Punjab"> Punjab  </option>
+<option value = "Rajasthan">  Rajasthan </option>
+<option value = "Sikkim"> Sikkim  </option>
+<option value = "Tamil_Nadu"> Tamil   Nadu  </option>
+<option value = "Telangana">  Telangana </option>
+<option value = "Tripura">  Tripura </option>
+<option value = "Uttar_Pradesh">  Uttar   Pradesh </option>
+<option value = "Uttarakhand">  Uttarakhand </option>
+<option value = "West_Bengal">  West   Bengal </option>
+
+        
+
+
+          </select>
+</div>
+<br>
+<div id="load_chart"><center><img src='images/graph_load.gif' height='300px'></center></div>
+<div id="chart3"></div>
+<div id="chart2"></div>
+<div id="chart1"></div>
+<div id="chart0"></div>
+
+<div class="toolbar">
+          <button id="one_month" class="">
+            1M
+          </button>
+          
+          <button id="three_month">
+            3M
+          </button>
+          
+          <button id="all" class="active">
+            ALL
+          </button>
+          
+           
+          
+        </div>
+
+</div>
+</div>
+</div>
+<h2 id="rr"></h2>
+<script src="js/scroller.js"></script>
+<script src="js/maintable.js"></script>
+<script src="js/mainmap.js"></script>
+<script src="js/mainchart.js"></script>
+
+<br><br>
+<center style='color:#007bff;font-weight: 900;font-size:18px'>Covid19India</center>
+<center>We stand with everyone fighting on the frontlines</center>
+<center><b>Contributed by:<a href="https://github.com/YashikGarg">Yashik Garg</a></b></center>
+<footer>
+<div class="centerdivi">
+<a href="https://www.linkedin.com/in/aniket-bansal-587aa4182/" target="_blank" class="footer_class"><i class="fa fa-2x fa-linkedin-in"></i></a>
+<a href="https://github.com/aniketbansal1201" target="_blank" class="footer_class"><i class="fa fa-2x fa-github"></i></a>
+<a href="https://www.facebook.com/aniket.bansal.9047" target="_blank" class="footer_class"><i class="fa fa-2x fa-facebook"></i></a>
+<a href="https://www.instagram.com/aniketbansal970/?hl=en" target="_blank" class="footer_class"><i class="fa fa-2x fa-instagram"></i></a>
+
+  
+</div>
+</footer>
+</body>
+</html>

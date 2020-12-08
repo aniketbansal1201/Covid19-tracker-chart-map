@@ -1,0 +1,119 @@
+#load{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: black url('images/tenor.gif')
+	no-repeat center;
+	
+	z-index: 99999;
+
+}
+
+
+
+.navbar-nav{
+	display:table;
+	float:none;
+	margin: 0 auto;
+	table-layout: fixed;
+	font-size:18px;
+	padding-top: 10px;
+	padding-bottom: 6px;
+}
+
+li a:hover {
+  background-color: #006699;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px){
+	
+	navbar-nav{
+		float: left;
+		font-size: 10px;
+    
+	}
+	.nav>li>a {padding: 10px;}
+}
+
+.navbar-brand{
+	font-size:24px;
+	padding-top: 28px;
+	padding-bottom: 38px;	
+}
+
+
+.bg_img{
+	
+  background-image: url('images/background.jpg');
+  max-width: 100%;
+        max-height: 100%;
+        height: 625px;
+         background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  
+}
+
+.bg_im{
+  
+  background-image: url('images/percaution2.jpg');
+  max-width: 100%;
+        max-height: 100%;
+        height: 625px;
+         background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  
+}
+.bg_i{
+  
+  background-image: url('images/aw.jpg');
+  max-width: 100%;
+        max-height: 100%;
+        height: 625px;
+         background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  
+}
+.bg_n{
+  
+  background-image: url('images/news.jpg');
+  max-width: 100%;
+        max-height: 100%;
+        height: 625px;
+         background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  
+}
+.centered {
+/*/ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 250%;
+  margin: 0 auto;
+  white-space: nowrap;*/
+  /*overflow: hidden;transform: translateY(-50%);*/
+ /* position: relative;
+  top: 50%;
+  width: 24em;
+  margin: 0 auto;
+ font-size: 250%;*/
+   position: absolute;
+  top: 50%;
+  left: 38%;
+  width: 
+  transform: translate(-50%, -50%);
+  font-size: 250%;
+ 	color: white;
+ white-space: nowrap;
+ overflow: hidden;transform: translateY(-50%); 
+}
+

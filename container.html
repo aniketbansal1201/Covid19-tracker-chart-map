@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Covid19</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/icon" href="images/titlebar.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css" integrity="sha512-kJ30H6g4NGhWopgdseRb8wTsyllFUYIx3hiUwmGAkgA9B/JbzUBDQVr2VVlWGde6sdBVOG7oU8AL35ORDuMm8g==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Texturina:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styproject.css">
+   <link rel="stylesheet" href= 
+"https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> 
+      
+    <link rel='stylesheet' href= 
+'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'> 
+      
+    <script src= 
+'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'> 
+    </script> 
+      
+    <script src= 
+'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'> 
+    </script> 
+	<style >
+		
+    body
+{
+font-family: 'Texturina', serif;
+}
+
+		/*.container{
+			position: relative;
+			width: 1200px;
+			height: 300px;
+			margin: 240px auto;
+			
+		}
+
+
+		.container .box{
+			position: relative;
+			width: calc(400px - 30px);
+			height: calc(300px - 30px);
+			background: #ff0;
+			float: left;
+			margin: 15px;
+			box-sizing: border-box;
+			overflow: hidden;
+			border-radius: 10px;
+
+
+		}
+		.icon {
+        
+        height: 10px;
+        width: 10px;
+        display: block;
+		}
+
+
+		.container .box .icon{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background:white;
+			transition: 0.5s;
+			z-index:1;
+		}*/
+		h2{
+			font-size: 32px;
+			/*font-family: sans-serif;*/
+			margin: 0px,0px,16px;
+		}
+		p{
+			font-size: 20px ;
+			/*font-family: sans-serif;*/
+			color: #35404E;
+			text-align: center;
+		}
+		span{
+			/*font-family: sans-serif;*/
+			color: #706AD4;
+			background-color: #E8E7FA;
+			border-radius: 15px;
+			padding: 2px 15px;
+		}
+		.pid{
+			font-size: 20px ;
+			/*font-family: sans-serif;*/
+			color: #35404E;
+			text-align: left;
+
+		}
+		.fa-check-circle{
+			color: #00ff00
+		}
+		.pid{
+			font-size: 20px ;
+			/*font-family: sans-serif;*/
+			color: #35404E;
+		}
+		.box{
+			padding: 18px;
+		}
+		.box1{
+			padding:24px;
+		
+		}
+
+		 .box:hover{
+/*	color: #f2f2f2;*/
+	box-shadow: 20px 50px 100px rgba(0,0,0,0.5);
+	border-radius: 10px;
+transition: all 0.5s ease-in;
+background-color: orange;
+}
+.box1:hover{
+/*	color: #f2f2f2;*/
+	box-shadow: 20px 50px 100px rgba(0,0,0,0.5);
+	border-radius: 10px;
+transition: all 0.5s ease-in;
+color: orange;
+
+}
+.id{
+	font-size: 18px;
+	}
+
+
+	.centerdivi{
+  		height: 100px;
+  		display: flex;
+  		justify-content: center;
+  		align-items: center;
+
+  	}
+  	.footer_class{
+  		height: 50px;
+  		width: 50px;
+  		background-color: #f5f6fa;
+  		border-radius: 25px;
+  		text-align: center;
+  		margin: 10px;
+  		box-shadow: 1px 4px 2px 2px #dcdde1;
+  		line-height: 60px;
+  	}
+  	.footer_class i{
+  		font-size: 20px;
+  		transition: all 0.3s linear;
+
+  	}
+  	.footer_class:hover i{
+  		transform: scale(1.4);
+  	}
+  	
+
+.navbar-nav{
+	display:table;
+	float:none;
+	margin: 0 auto;
+	table-layout: fixed;
+	font-size:18px;
+	padding-top: 10px;
+	padding-bottom: 6px;
+}
+
+li a:hover {
+  background-color: #006699;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px){
+	
+	navbar-nav{
+		float: left;
+		font-size: 10px;
+	}
+	.nav>li>a {padding: 10px;}
+}
+
+.navbar-brand{
+	font-size:24px;
+	padding-top: 28px;
+	padding-bottom: 38px;	
+}
+.my_active{
+  background-color: white;
+  border-radius: 5px;
+}
+.ques{
+	color: orange;
+
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  font-family: 
+}
+#cau{
+	color: #D3B969;
+	background-color: transparent;
+}
+	</style>
+
+</head>
+<body>
+	<div class="bg_i"> 
+		<div class="centered"><h1  style="font-family: Franklin Gothic Condensed; color: white; font-size: 50px;">Be<span id="cau">INFORMED</span><br>Be<span id="cau">PREPARED</span><br>Be<span id="cau">SMART</span><br>Be<span id="cau">SAFE</span><br><br>Be<span id="cau">READY</span> to fight<br><span id="cau">#COVID19</span></h1>
+
+
+
+
+		</div>
+	</div>
+	<table class="table">
+<nav class="navbar navbar-fixed-top navbar_class">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar" style="background-color:#337ab7"></span>
+        <span class="icon-bar" style="background-color:#337ab7"></span>
+        <span class="icon-bar" style="background-color:#337ab7"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Covid Tracker</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav " style="font-family: Franklin Gothic Condensed;">
+        <li class="active"><a href="index.html">Home</a></li>
+    <li class="nav-item">
+      <a class="nav-link" href="pre.html">Awareness</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pdf.html">News</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link my_active" href="#">Percaution</a>
+    </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+</table>
+<br>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6"><img src="images/novel.png" style="width: 500px;height: 500px"></div>
+			<div class="col-md-6" style="align-self: center !important;">
+				<br><br><br><br><h5><span>About Covid-19</span></h5><br>
+				<h2><b>What is novel Coronnavirus?</b></h2><br><br>
+				<p class="pid">More than 78,191 people have contracted the virus in China. Health authorities have identified many other people with COVID-19 around the world, including in the United States. On January 31, 2020, the virus pass from one person to another in the U.S. Coronaviruses are a type of virus. There are many different kinds.</p>
+			</div>
+			 
+		</div>
+		
+	</div>
+	<br>
+	<div class="container-fluid " style="background-color: #F8F8FC" >
+		<br><br><div class="row">
+				<div class="col-md-6">
+				<h5><span>Covid-19 Symptoms</span></h5><br>
+				<h2><b>What are the Symptoms?</b></h2><br><br>
+				<p class="pid">More than 78,191 people have contracted the virus in China. Health authorities have identified many other people with COVID-19 around the world, including in the United States. On January 31, 2020, the virus pass from one person to another in the U.S. Coronaviruses are a type of virus. There are many different kinds.</p><br>
+
+				<div class="id">
+				<div class="row">
+				<div class="col-md-6"><i class="fa  fa-check-circle"></i>&nbsp;Sore Throat<br class="visible-xs visible-sm"></div>
+				<div class="col-md-6"><i class="fa  fa-check-circle"></i>&nbsp;Headache</div>
+				</div><br>
+				<div class="row">
+
+				<div class="col-md-6"><i class="fa  fa-check-circle"></i>&nbsp;Fever</div>
+				<div class="col-md-6"><i class="fa  fa-check-circle"></i>&nbsp;Fatigue</div>
+			</div><br>
+			<div class="row">
+				<div class="col-md-6"><i class="fa  fa-check-circle"></i>&nbsp;Runy Nose</div>
+				<div class="col-md-6"><i class="fa  fa-check-circle"></i>&nbsp;Dry cough</div>
+			</div>
+			</div>
+			 </div>
+
+			<div class="col-md-6"><img src="images/symptoms.png" style="width: 500px;height: 500px"></div>
+		
+		</div>
+		
+	</div>
+
+
+
+
+
+<br><br><div class="container-fluid">
+<center><h4><span>Percaution</span></h4></center><br>
+<h2><center><b>how to stay safe important percaution</b></center></h2>
+<p >If you are healthy, you only need to wear a mask if you are taking care of a person with suspected covid infection.</p><br>
+<div class="container">
+<div class="row ">
+	<div class="col-md-4 box1"><div class="icon"><center><img src="images/06.png" style='width:70px;height:70px;'><br><br><b style="font-size: 20px;">Wear Mask</b><p ><br>Clean your hands before you put your mask on, as well as before and after you take it off.</p></center></div></div>
+	<div class="col-md-4 box1"><div class="icon"><center><img src="images/05.png" style='width:70px;height:70px;'><br><br><b style="font-size: 20px;">Cough</b><p><br> Cover your mouth and nose with your bent elbow or tissue when you cough or sneeze. Then dispose of the used tissue immediately into a closed bin and wash your hands.</p></center></div></div>
+	<div class="col-md-4 box1"><div class="icon"><center><img src="images/04.png" style='width:70px;height:70px;'><br><br><b style="font-size: 20px;">Wash your hand</b><p><br>Wash your hands frequently. Washing hands with soap and water is the best way to get rid of germs in most situations.</p></center></div></div>
+</div>
+<div class="row">
+	<div class="col-md-4 box1"><div class="icon"><center><img src="images/03.png" style='width:70px;height:70px;'><br><br><b style="font-size: 20px;">Dont touch eyes,nose or <br>mouth with unwashed hands</b><br><p >Avoid touching your eyes, nose, and mouth. Never touch your face with dirty hands.</p></center></div></div>
+	<div class="col-md-4 box1"><div class="icon"><center><img src="images/02.png" style='width:70px;height:70px;'><br><br><b style="font-size: 20px;">Avoid contact with sick people</b><br><p >Avoid close contact with people who are sick. If possible, maintain 6 feet between the person who is sick and other household members.</p></center></div></div>
+	<div class="col-md-4 box1"><div class="icon"><center><img src="images/01.png" style='width:70px;height:70px;'><br><br><b style="font-size: 20px;">Clean & disinfect</b><br><p>Clean and disinfect surfaces frequently especially those which are regularly touched, such as door handles, faucets and phone screens.</p></center></div></div>
+</div>
+	
+
+
+</div>
+</div>
+
+
+
+
+
+<br><br><div class="container-fluid" style="background-color: #F8F8FC">
+	<br><br><center><h4><span>Transmission</span></h4></center><br>
+  <center><h1><b>How Virus Spread</b></h1></center>
+  <p>When an infected person coughs, sneezes, or talks, droplets or tiny particles called aerosols <br>carry the virus into the air from their nose or mouth.</p><br>
+  <div class="row">
+    <div class="col-md-7"><img src="images/trans.png" style='width:510px;height:605px;'></div>
+    <br><br>
+    <div class=" col-md-5 ">
+
+    	<div class="row box">
+    		<div class="col-md-3">
+    		<br class="visible-lg visible-md"><br class="visible-lg visible-md">	<img src="images/trans1.png" style='width:100px;height:100px;'>
+    	    </div>
+    	    <div class="col-md-9 ">
+    		<h3><b>Human Contact</b></h3><p class="pid">some coronaviruses can be transmitted from person to person, usually after close contact with an infected patient.</p>
+    		</div>
+    	</div>
+    	<br><br>
+        	<div class="row box">
+    		<div class="col-md-3">
+    		<br class="visible-lg visible-md"><br class="visible-lg visible-md"><img src="images/trans2.png" style='width:100px;height:100px;'>
+    	    </div>
+    	    <div class="col-md-9">
+    		<h3><b>Air transmission</b></h3><p class="pid">The virus that cause COVID-19 spreads primarily through droplets generated when an infected person coughs, sneezes or speaks. </p>
+    		</div>
+    	</div>
+    	<br><br>
+     	<div class="row box">
+    		<div class="col-md-3">
+    		<br class="visible-lg visible-md"><br class="visible-lg visible-md"><img src="images/trans3.png" style='width:100px;height:100px;'>
+    	    </div>
+    	    <div class="col-md-9">
+    		<h3><b>Contaminated object</b></h3><p class="pid">You can also become infected by touching a contaminated surface and then touching your eyes, nose or mouth before washing your hands.</p>
+    		</div>
+    	</div>
+
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="container-fluid">
+<br><center><h4><span>FAQ</span></h4></center><br>
+<h2><center><b>Frequently asked questions</b></center></h2>
+<p >Find informative answers to all your questions about Covid-19</p><br><br>
+<div class="container">
+<div class="row ">
+	<div class="col-md-6 "><i class="glyphicon glyphicon-question-sign ques"></i><b style="font-size: 20px;">What is the source of the virus ?</b><br><br>
+		<p style="font-size: 16px;text-align: left;">This is suspected to have occurred for the virus that causes COVID-19. Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS) are two other examples of coronaviruses that originated from animals and then spread to people. More information about the source and spread of COVID-19 is available on the Situation Summary: Source and Spread of the Virus.</p><br><br>
+		<i class="glyphicon glyphicon-question-sign ques"></i><b style="font-size: 20px;">Why is the disease being called coronavirus disease 2019?</b><br><br>
+		<p style="font-size: 16px;text-align: left;">There are many types of human coronaviruses including some that commonly cause mild upper-respiratory tract illnesses. COVID-19 is a new disease, caused be a novel (or new) coronavirus that has not previously been seen in humans. The name of this disease was selected following the World Health Organization (WHO) best practiceexternal icon for naming of new human infectious diseases.</p>
+
+
+	</div>
+	<div class="col-md-6 ">
+		<i class="glyphicon glyphicon-question-sign ques"></i><b style="font-size: 20px;">How can people help stop stigma related to COVID-19?</b><br><br>
+		<p style="font-size: 16px;text-align: left;">People can fight stigma and help, not hurt, others by providing social support. Counter stigma by learning and sharing facts. Communicating the facts that viruses do not target specific racial or ethnic groups and how COVID-19 actually spreads can help stop stigma.</p><br><br><br><br>
+		<i class="glyphicon glyphicon-question-sign ques"></i><b style="font-size: 20px;">Why might someone blame or avoid individuals and groups?</b><br><br>
+		<p style="font-size: 16px;text-align: left;">discrimination against an identifiable group of people, a place, or a nation. Stigma is associated with a lack of knowledge about how COVID-19 spreads, a need to blame someone, fears about disease and death, and gossip that spreads rumors and myths.Stigma hurts everyone by creating more fear or anger towards ordinary people instead of the disease that is causing the problem.</p>
+
+
+	</div>
+</div>
+
+	
+
+
+</div>
+</div>
+
+
+
+
+<br><br>
+<center style='color:#007bff;font-weight: 900;font-size:18px'>Covid19India</center>
+<center>We stand with everyone fighting on the frontlines</center>
+<center><b>Contributed by:<a href="https://github.com/YashikGarg">Yashik Garg</a></b></center>
+
+<footer>
+<div class="centerdivi">
+<<a href="https://www.linkedin.com/in/aniket-bansal-587aa4182/" target="_blank" class="footer_class"><i class="fa fa-2x fa-linkedin-in"></i></a>
+<a href="https://github.com/aniketbansal1201" target="_blank" class="footer_class"><i class="fa fa-2x fa-github"></i></a>
+<a href="https://www.facebook.com/aniket.bansal.9047" target="_blank" class="footer_class"><i class="fa fa-2x fa-facebook"></i></a>
+<a href="https://www.instagram.com/aniketbansal970/?hl=en" target="_blank" class="footer_class"><i class="fa fa-2x fa-instagram"></i></a>
+
+ 
+
+</footer>
+
+<script >
+	
+
+
+$(document).ready(function(){
+  $(window).scroll(function(){
+  	var scroll = $(window).scrollTop();
+	  if (scroll > 650) {
+	    $(".navbar_class").css("background" , "#000000");
+	  }
+
+	  else{
+		  $(".navbar_class").css("background" , "transparent");  	
+	  }
+  })
+})
+
+
+</script>
+</body>
+</html>
