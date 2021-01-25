@@ -91,6 +91,7 @@ var active_Jharkhand=[[],[],[],[]];
 var active_Karnataka=[[],[],[],[]];
 var active_Kerala=[[],[],[],[]];
 var active_Ladakh=[[],[],[],[]];
+var	active_Lakshadweep=[[],[],[],[]];  
 var active_Madhya_Pradesh=[[],[],[],[]];
 var active_Maharashtra=[[],[],[],[]];
 var active_Manipur=[[],[],[],[]];
